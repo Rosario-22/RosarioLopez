@@ -8,7 +8,7 @@ Actualmente aprendiendo HTML y CSS
 Busco mi primera oportunidad como desarrolladora trainee.
 
 Proyectos
-- Laberinto en C (en progreso)
+- Juego de escape, laberinto en C
 - Sistema de Estacionamiento en C
 - Sistema de Gestión en Java
 
