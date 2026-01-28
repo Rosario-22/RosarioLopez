@@ -1,6 +1,6 @@
 Hola, soy Rosario
 
-Estudiante de Licenciatura en Sistemas
+Estudiante de Licenciatura en Sistemas.
 Me interesa el desarrollo backend y fullstack  
 Trabajo con C, Java, SQL y Git  
 Actualmente aprendiendo HTML y CSS  
