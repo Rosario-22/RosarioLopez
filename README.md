@@ -15,4 +15,4 @@ Proyectos
 Contacto
 - Email: lopeztorresrosario362@gmail.com
 - Email secundario: lopeztorresrosario362@hotmail.com
-- LinkedIn: Rosario López
+- LinkedIn: https://www.linkedin.com/feed/
