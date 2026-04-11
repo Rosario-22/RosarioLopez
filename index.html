@@ -1,0 +1,678 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosario López | Portfolio</title>
+  <meta name="description" content="Portfolio personal de Rosario López, desarrolladora trainee en Córdoba Capital, con experiencia en C, Java, SQL, Git y trabajo en Midocta." />
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0d1730;
+      --card: rgba(10, 18, 36, 0.76);
+      --line: rgba(255, 255, 255, 0.08);
+      --text: #edf4ff;
+      --muted: #b2bfd4;
+      --accent: #67e8f9;
+      --accent-2: #f59e0b;
+      --radius: 24px;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(103, 232, 249, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(245, 158, 11, 0.12), transparent 24%),
+        linear-gradient(180deg, #050b17 0%, var(--bg) 42%, #040812 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 56px 56px;
+      opacity: 0.25;
+      pointer-events: none;
+      mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      padding: 24px 0 12px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 22px;
+      border: 1px solid var(--line);
+      background: rgba(5, 10, 22, 0.75);
+      backdrop-filter: blur(18px);
+      border-radius: 999px;
+      box-shadow: var(--shadow);
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #05111d;
+      background: linear-gradient(135deg, var(--accent), #fff);
+      font-weight: 800;
+    }
+    .brand small { color: var(--muted); }
+
+    .nav-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      padding: 36px 0 20px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 22px;
+    }
+
+    .card,
+    .section-card {
+      border: 1px solid var(--line);
+      background: var(--card);
+      backdrop-filter: blur(18px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(103, 232, 249, 0.24), transparent 65%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(103, 232, 249, 0.12);
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.7rem);
+      line-height: 0.96;
+      margin-top: 18px;
+      letter-spacing: -0.05em;
+    }
+
+    .hero-copy {
+      margin-top: 18px;
+      color: var(--muted);
+      max-width: 64ch;
+      font-size: 1.05rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), #dffcff); color: #06111f; }
+    .btn-secondary { background: rgba(255, 255, 255, 0.04); color: var(--text); border: 1px solid var(--line); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .stat {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .stat strong { display: block; font-size: 1.2rem; margin-bottom: 4px; }
+
+    .side {
+      padding: 24px;
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .avatar {
+      width: 68px;
+      height: 68px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #08121e;
+      background: linear-gradient(135deg, #fef08a, #67e8f9);
+    }
+    .profile small { color: var(--muted); }
+
+    .info-list { display: grid; gap: 14px; }
+    .info-item {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .info-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section { padding: 12px 0 30px; }
+    .section-card { padding: 28px; }
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .section-header p { color: var(--muted); max-width: 64ch; }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+
+    .box {
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .box p { color: var(--muted); margin-top: 10px; }
+
+    .tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .tag {
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(129, 140, 248, 0.16);
+      color: #d9ddff;
+      font-size: 0.85rem;
+      border: 1px solid rgba(129, 140, 248, 0.18);
+    }
+
+    .timeline { display: grid; gap: 16px; }
+    .timeline-item {
+      padding: 18px 20px;
+      border-left: 3px solid var(--accent);
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 0 18px 18px 0;
+    }
+    .timeline-item strong { display: block; font-size: 1.04rem; }
+    .timeline-item small {
+      color: var(--accent);
+      display: inline-block;
+      margin-top: 2px;
+      margin-bottom: 10px;
+    }
+    .timeline-item p { color: var(--muted); }
+
+    .project-card h3, .skill-card h3, .contact-card h3 { font-size: 1.08rem; }
+    .project-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .chip {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 18px; }
+    .contact-list { display: grid; gap: 12px; margin-top: 14px; }
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      text-decoration: none;
+    }
+    .contact-row span { color: var(--muted); }
+
+    footer {
+      padding: 12px 0 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav,
+      .section-header { flex-direction: column; align-items: start; }
+      .nav-links { justify-content: start; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 18px, 1120px); }
+      .hero-main,
+      .side,
+      .section-card { padding: 20px; }
+      .stats { grid-template-columns: 1fr; }
+      h1 { font-size: 2.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav class="nav" aria-label="Navegación principal">
+      <div class="brand">
+        <div class="badge">RL</div>
+        <div>
+          <div>Rosario López</div>
+          <small>Desarrolladora trainee</small>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#about">Sobre mí</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Formación</a>
+        <a href="#contact">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-label="Presentación principal">
+      <article class="card hero-main">
+        <div class="eyebrow">Disponible para oportunidades trainee</div>
+        <h1>Hola, soy Rosario y estoy construyendo mi camino en desarrollo.</h1>
+        <p class="hero-copy">
+          Vivo en Córdoba Capital y estoy gestionando el cambio de carrera para comenzar Ingeniería en Sistemas
+          en la UTN-FRC. Mientras tanto, sigo trabajando en la Municipalidad de Córdoba en el proyecto
+          <strong>Midocta</strong>. Me interesa el desarrollo backend y fullstack, y me gusta aprender, resolver
+          problemas y crear soluciones útiles con tecnología.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Hablemos</a>
+          <a class="btn btn-secondary" href="#projects">Ver proyectos</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>C, Java, SQL</strong>
+            <span style="color: var(--muted);">Tecnologías con las que ya trabajo</span>
+          </div>
+          <div class="stat">
+            <strong>Git + HTML/CSS</strong>
+            <span style="color: var(--muted);">Bases para seguir creciendo</span>
+          </div>
+        </div>
+      </article>
+
+      <aside class="card side">
+        <div class="profile">
+          <div class="avatar">RL</div>
+          <div>
+            <h2 style="font-size: 1.3rem;">Rosario López</h2>
+            <small>Córdoba Capital</small>
+          </div>
+        </div>
+
+        <div class="info-list">
+          <div class="info-item">
+            <span>Actualmente</span>
+            Córdoba Capital, proyecto Midocta
+          </div>
+          <div class="info-item">
+            <span>Intereses</span>
+            Backend, fullstack y aprendizaje continuo
+          </div>
+          <div class="info-item">
+            <span>Objetivo</span>
+            Ingresar a Ingeniería en Sistemas en UTN-FRC
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2>Sobre mí</h2>
+            <p>Una presentación corta para que se entienda rápido quién sos, qué buscás y hacia dónde querés crecer.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="box">
+            <h3>Mi enfoque</h3>
+            <p>
+              Me interesa crear soluciones ordenadas, funcionales y fáciles de mantener. Disfruto trabajar con
+              lógica, aprender herramientas nuevas y mejorar poco a poco cada proyecto.
+            </p>
+            <div class="tags">
+              <span class="tag">Backend</span>
+              <span class="tag">Fullstack</span>
+              <span class="tag">Aprendizaje continuo</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <h3>Lo que busco</h3>
+            <p>
+              Una oportunidad junior o trainee donde pueda sumar experiencia real, seguir formándome y aportar con
+              responsabilidad, ganas y compromiso.
+            </p>
+            <div class="tags">
+              <span class="tag">Trainee</span>
+              <span class="tag">Junior</span>
+              <span class="tag">Primer empleo IT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2>Experiencia</h2>
+            <p>Ordené tu experiencia para que resalte tanto lo institucional como lo laboral y las habilidades que ya venís usando.</p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>Municipalidad de Córdoba</strong>
+            <small>Proyecto Midocta | Actualmente</small>
+            <p>
+              Participación en un proyecto institucional orientado a tecnología y gestión. Ideal para mostrar tu
+              experiencia real, tu adaptación a equipos de trabajo y tu compromiso con entornos profesionales.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <strong>Ayudante de peluquería</strong>
+            <small>Mayo 2024 - Agosto 2025</small>
+            <p>
+              Asistencia en atención al cliente, apoyo en tareas de peluquería, mantenimiento del espacio de trabajo
+              y preparación de herramientas.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <strong>Gestión de redes sociales - peluquería</strong>
+            <small>Mayo 2024 - Agosto 2025</small>
+            <p>
+              Administración de Instagram, Facebook y TikTok, creación de contenido publicitario y promociones,
+              y grabación y edición de videos cortos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2>Proyectos</h2>
+            <p>Acá podés mostrar práctica, lógica y constancia. Después podemos sumar capturas, links o repos cuando quieras.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <article class="box project-card">
+            <h3>Juego de escape y laberinto en C</h3>
+            <p>Proyecto enfocado en lógica, estructuras de control y resolución de problemas.</p>
+            <div class="project-meta">
+              <span class="chip">C</span>
+              <span class="chip">Lógica</span>
+            </div>
+          </article>
+
+          <article class="box project-card">
+            <h3>Sistema de estacionamiento en C</h3>
+            <p>Desarrollo para administrar entradas, salidas y control de registros de forma ordenada.</p>
+            <div class="project-meta">
+              <span class="chip">C</span>
+              <span class="chip">Gestión</span>
+            </div>
+          </article>
+
+          <article class="box project-card">
+            <h3>Sistema de gestión en Java</h3>
+            <p>Proyecto orientado a organizar datos y procesar información con una estructura más robusta.</p>
+            <div class="project-meta">
+              <span class="chip">Java</span>
+              <span class="chip">POO</span>
+              <span class="chip">SQL</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2>Habilidades</h2>
+            <p>Un resumen simple de tus herramientas actuales y de las que querés seguir fortaleciendo.</p>
+          </div>
+        </div>
+
+        <div class="grid-4">
+          <div class="box skill-card">
+            <h3>Lenguajes</h3>
+            <p>C, Java, SQL</p>
+          </div>
+          <div class="box skill-card">
+            <h3>Frontend</h3>
+            <p>HTML, CSS</p>
+          </div>
+          <div class="box skill-card">
+            <h3>Control de versiones</h3>
+            <p>Git</p>
+          </div>
+          <div class="box skill-card">
+            <h3>Próximos pasos</h3>
+            <p>JavaScript, React y mejores prácticas de UI</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2>Formación académica</h2>
+            <p>Tu formación queda más visible y ordenada, incluyendo el cambio de carrera que estás gestionando.</p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>Ingeniería en Sistemas - UTN FRC</strong>
+            <small>Ingreso en trámite</small>
+            <p>
+              Estoy esperando que se tramiten los papeles desde UNRN para poder arrancar a cursar en la UTN-FRC.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <strong>Licenciatura en Sistemas - Universidad Nacional de Río Negro</strong>
+            <small>Trayectoria previa</small>
+            <p>
+              Formación en curso que forma parte de mi recorrido académico y que acompaña mi transición hacia Ingeniería en Sistemas.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <strong>Técnico en Producción Agropecuaria con Orientación en Agroalimentos</strong>
+            <small>Escuela de Educación Secundaria Agraria "Carlos Spegazzini" | Dic. 2022</small>
+            <p>
+              Promedio: 7.92.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2>Cursos</h2>
+            <p>Los cursos suman mucho para un perfil trainee, así que los dejé bien visibles.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="box">
+            <h3>Formación complementaria</h3>
+            <p>
+              Producción de la Huerta Agroecológica - INTA (2022)<br />
+              Introducción a las nuevas tecnologías para la producción de alimentos - INTA (2022)<br />
+              Italiano Básico A1.1 - CUI.UBA (2023)
+            </p>
+          </div>
+          <div class="box">
+            <h3>Tecnología</h3>
+            <p>
+              Introducción a Git y GitHub - TodoCode Academy (2026)<br />
+              Introducción a las Bases de Datos Relacionales con MySQL - TodoCode Academy (2026)<br />
+              Escalabilidad y Seguridad de Aplicaciones Web - Edutin Academy (2026)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2>Contacto</h2>
+            <p>Dejalo listo para que recruiters o contactos puedan escribirte rápido y sin fricción.</p>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="box contact-card">
+            <h3>Datos de contacto</h3>
+            <div class="contact-list">
+              <a class="contact-row" href="mailto:lopeztorresrosario362@gmail.com">
+                <span>Email</span>
+                <strong>lopeztorresrosario362@gmail.com</strong>
+              </a>
+              <a class="contact-row" href="mailto:lopeztorresrosario362@hotmail.com">
+                <span>Email secundario</span>
+                <strong>lopeztorresrosario362@hotmail.com</strong>
+              </a>
+              <div class="contact-row">
+                <span>LinkedIn</span>
+                <strong>Por definir</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="box contact-card">
+            <h3>Mensaje corto</h3>
+            <p style="color: var(--muted); margin-top: 10px;">
+              "Estoy buscando mi primera oportunidad como desarrolladora trainee y me interesa seguir creciendo en
+              proyectos con impacto real."
+            </p>
+            <div class="tags" style="margin-top: 18px;">
+              <span class="tag">Disponible</span>
+              <span class="tag">Aprendizaje</span>
+              <span class="tag">Compromiso</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Hecho por Rosario López.
+  </footer>
+</body>
+</html>
