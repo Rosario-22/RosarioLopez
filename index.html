@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rosario López | Portfolio</title>
-  <meta name="description" content="Portfolio personal de Rosario López, desarrolladora trainee en Córdoba Capital, con experiencia en C, Java, SQL, Git y trabajo en Midocta." />
+  <meta name="description" content="Portfolio personal de Rosario López, desarrolladora en formación enfocada en backend con Java, pasantía UTN con la Municipalidad de Córdoba y aprendizaje de Spring y Spring Boot." />
   <style>
     :root {
-      --bg: #07111f;
-      --bg-2: #0d1730;
-      --card: rgba(10, 18, 36, 0.76);
-      --line: rgba(255, 255, 255, 0.08);
-      --text: #edf4ff;
-      --muted: #b2bfd4;
-      --accent: #67e8f9;
-      --accent-2: #f59e0b;
+      --bg: #120914;
+      --bg-2: #23101c;
+      --card: rgba(32, 16, 26, 0.82);
+      --line: rgba(255, 162, 201, 0.18);
+      --text: #fff6fa;
+      --muted: #d7afc1;
+      --accent: #ff6fa7;
+      --accent-2: #ffb3d3;
       --radius: 24px;
-      --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
     }
 
     * { box-sizing: border-box; }
@@ -26,9 +26,9 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(103, 232, 249, 0.16), transparent 28%),
-        radial-gradient(circle at top right, rgba(245, 158, 11, 0.12), transparent 24%),
-        linear-gradient(180deg, #050b17 0%, var(--bg) 42%, #040812 100%);
+        radial-gradient(circle at top left, rgba(255, 111, 167, 0.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(255, 179, 211, 0.18), transparent 24%),
+        linear-gradient(180deg, #0b0710 0%, var(--bg) 42%, #07050a 100%);
       min-height: 100vh;
       line-height: 1.6;
     }
@@ -64,7 +64,7 @@
       gap: 16px;
       padding: 16px 22px;
       border: 1px solid var(--line);
-      background: rgba(5, 10, 22, 0.75);
+      background: rgba(8, 5, 10, 0.74);
       backdrop-filter: blur(18px);
       border-radius: 999px;
       box-shadow: var(--shadow);
@@ -77,8 +77,8 @@
       border-radius: 14px;
       display: grid;
       place-items: center;
-      color: #05111d;
-      background: linear-gradient(135deg, var(--accent), #fff);
+      color: #2b0f1e;
+      background: linear-gradient(135deg, #ff8ab8, #ffe3ef);
       font-weight: 800;
     }
     .brand small { color: var(--muted); }
@@ -121,7 +121,7 @@
       width: 260px;
       height: 260px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(103, 232, 249, 0.24), transparent 65%);
+      background: radial-gradient(circle, rgba(255, 111, 167, 0.24), transparent 65%);
       pointer-events: none;
     }
 
@@ -131,8 +131,8 @@
       gap: 8px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(103, 232, 249, 0.12);
-      color: var(--accent);
+      background: rgba(255, 111, 167, 0.14);
+      color: #ffbfd7;
       font-size: 0.9rem;
       font-weight: 600;
     }
@@ -170,8 +170,8 @@
       transition: transform 0.2s ease, background 0.2s ease;
     }
     .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), #dffcff); color: #06111f; }
-    .btn-secondary { background: rgba(255, 255, 255, 0.04); color: var(--text); border: 1px solid var(--line); }
+    .btn-primary { background: linear-gradient(135deg, #ff7db1, #ffd5e6); color: #2b0f1e; }
+    .btn-secondary { background: rgba(255, 255, 255, 0.05); color: var(--text); border: 1px solid var(--line); }
 
     .stats {
       display: grid;
@@ -182,7 +182,7 @@
     .stat {
       padding: 16px;
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.06);
     }
     .stat strong { display: block; font-size: 1.2rem; margin-bottom: 4px; }
@@ -208,8 +208,18 @@
       place-items: center;
       font-size: 1.35rem;
       font-weight: 800;
-      color: #08121e;
-      background: linear-gradient(135deg, #fef08a, #67e8f9);
+      color: #2b0f1e;
+      background: linear-gradient(135deg, #ff8ab8, #ffe8f1);
+    }
+    .profile-photo {
+      width: 68px;
+      height: 68px;
+      border-radius: 22px;
+      object-fit: cover;
+      object-position: center;
+      border: 1px solid rgba(255, 162, 201, 0.18);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+      background: rgba(255, 255, 255, 0.04);
     }
     .profile small { color: var(--muted); }
 
@@ -217,7 +227,7 @@
     .info-item {
       padding: 14px 16px;
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.06);
     }
     .info-item span {
@@ -256,10 +266,10 @@
     .tag {
       padding: 7px 11px;
       border-radius: 999px;
-      background: rgba(129, 140, 248, 0.16);
-      color: #d9ddff;
+      background: rgba(255, 111, 167, 0.15);
+      color: #ffe4f0;
       font-size: 0.85rem;
-      border: 1px solid rgba(129, 140, 248, 0.18);
+      border: 1px solid rgba(255, 111, 167, 0.18);
     }
 
     .timeline { display: grid; gap: 16px; }
@@ -283,9 +293,22 @@
     .chip {
       padding: 6px 10px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--muted);
+      background: rgba(255, 111, 167, 0.12);
+      color: #ffe4f0;
       font-size: 0.84rem;
+    }
+
+    .project-link {
+      padding: 8px 12px;
+      font-size: 0.84rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .project-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
     .contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 18px; }
@@ -296,12 +319,31 @@
       gap: 16px;
       padding: 14px 16px;
       border-radius: 16px;
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.06);
       color: var(--text);
       text-decoration: none;
     }
     .contact-row span { color: var(--muted); }
+
+    .contact-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 999px;
+      background: rgba(255, 111, 167, 0.18);
+      color: var(--text);
+      font-size: 0.72rem;
+      flex: 0 0 auto;
+    }
 
     footer {
       padding: 12px 0 40px;
@@ -357,13 +399,12 @@
   <main class="container">
     <section class="hero" aria-label="Presentación principal">
       <article class="card hero-main">
-        <div class="eyebrow">Disponible para oportunidades trainee</div>
+        <div class="eyebrow">Backend Java en formación</div>
         <h1>Hola, soy Rosario y estoy construyendo mi camino en desarrollo.</h1>
         <p class="hero-copy">
-          Vivo en Córdoba Capital y estoy gestionando el cambio de carrera para comenzar Ingeniería en Sistemas
-          en la UTN-FRC. Mientras tanto, sigo trabajando en la Municipalidad de Córdoba en el proyecto
-          <strong>Midocta</strong>. Me interesa el desarrollo backend y fullstack, y me gusta aprender, resolver
-          problemas y crear soluciones útiles con tecnología.
+          Soy desarrolladora en formación con foco en backend utilizando Java. Actualmente estoy aprendiendo
+          Spring y Spring Boot para dar mis primeros pasos en el desarrollo de aplicaciones robustas y escalables.
+          Me motiva aprender constantemente, resolver problemas y desarrollar soluciones eficientes.
         </p>
 
         <div class="actions">
@@ -373,19 +414,23 @@
 
         <div class="stats">
           <div class="stat">
-            <strong>C, Java, SQL</strong>
+            <strong>Java, SQL, Git</strong>
             <span style="color: var(--muted);">Tecnologías con las que ya trabajo</span>
           </div>
           <div class="stat">
-            <strong>Git + HTML/CSS</strong>
-            <span style="color: var(--muted);">Bases para seguir creciendo</span>
+            <strong>Spring y Spring Boot</strong>
+            <span style="color: var(--muted);">Aprendizaje en curso</span>
           </div>
         </div>
       </article>
 
       <aside class="card side">
         <div class="profile">
-          <div class="avatar">RL</div>
+          <img
+            class="profile-photo"
+            src="imagenes/WhatsApp%20Image%202026-02-27%20at%2013.19.14%20(1).jpeg"
+            alt="Foto de Rosario López"
+          />
           <div>
             <h2 style="font-size: 1.3rem;">Rosario López</h2>
             <small>Córdoba Capital</small>
@@ -395,15 +440,15 @@
         <div class="info-list">
           <div class="info-item">
             <span>Actualmente</span>
-            Córdoba Capital, proyecto Midocta
+            Córdoba Capital, pasantía UTN + Municipalidad de Córdoba
           </div>
           <div class="info-item">
             <span>Intereses</span>
-            Backend, fullstack y aprendizaje continuo
+            Backend, Java y aprendizaje continuo
           </div>
           <div class="info-item">
             <span>Objetivo</span>
-            Ingresar a Ingeniería en Sistemas en UTN-FRC
+            Seguir creciendo en backend con Java
           </div>
         </div>
       </aside>
@@ -414,7 +459,6 @@
         <div class="section-header">
           <div>
             <h2>Sobre mí</h2>
-            <p>Una presentación corta para que se entienda rápido quién sos, qué buscás y hacia dónde querés crecer.</p>
           </div>
         </div>
 
@@ -423,11 +467,12 @@
             <h3>Mi enfoque</h3>
             <p>
               Me interesa crear soluciones ordenadas, funcionales y fáciles de mantener. Disfruto trabajar con
-              lógica, aprender herramientas nuevas y mejorar poco a poco cada proyecto.
+              lógica, profundizar en Java, y seguir aprendiendo Spring y Spring Boot paso a paso.
             </p>
             <div class="tags">
               <span class="tag">Backend</span>
-              <span class="tag">Fullstack</span>
+              <span class="tag">Java</span>
+              <span class="tag">Spring en aprendizaje</span>
               <span class="tag">Aprendizaje continuo</span>
             </div>
           </div>
@@ -453,17 +498,16 @@
         <div class="section-header">
           <div>
             <h2>Experiencia</h2>
-            <p>Ordené tu experiencia para que resalte tanto lo institucional como lo laboral y las habilidades que ya venís usando.</p>
           </div>
         </div>
 
         <div class="timeline">
           <div class="timeline-item">
             <strong>Municipalidad de Córdoba</strong>
-            <small>Proyecto Midocta | Actualmente</small>
+            <small>Pasantía UTN + Municipalidad de Córdoba | Recién comenzando</small>
             <p>
-              Participación en un proyecto institucional orientado a tecnología y gestión. Ideal para mostrar tu
-              experiencia real, tu adaptación a equipos de trabajo y tu compromiso con entornos profesionales.
+              Participación en una pasantía institucional orientada a tecnología y gestión. Recién empieza, así que
+              todavía hay mucho camino por recorrer, aprender y sumar experiencia real en un entorno profesional.
             </p>
           </div>
 
@@ -500,30 +544,43 @@
         <div class="grid-3">
           <article class="box project-card">
             <h3>Juego de escape y laberinto en C</h3>
-            <p>Proyecto enfocado en lógica, estructuras de control y resolución de problemas.</p>
+            <p>Proyecto simple de la universidad, de primer año de Sistemas, enfocado en lógica, estructuras de control y resolución de problemas.</p>
             <div class="project-meta">
               <span class="chip">C</span>
               <span class="chip">Lógica</span>
+              <a class="btn btn-secondary project-link" href="https://github.com/Rosario-22/Laberinto-C" target="_blank" rel="noopener noreferrer">Ver repo</a>
             </div>
           </article>
 
           <article class="box project-card">
             <h3>Sistema de estacionamiento en C</h3>
-            <p>Desarrollo para administrar entradas, salidas y control de registros de forma ordenada.</p>
+            <p>Proyecto simple de la universidad, de primer año de Sistemas, para administrar entradas, salidas y control de registros de forma ordenada.</p>
             <div class="project-meta">
               <span class="chip">C</span>
               <span class="chip">Gestión</span>
+              <a class="btn btn-secondary project-link" href="https://github.com/Rosario-22/estacionamiento-C" target="_blank" rel="noopener noreferrer">Ver repo</a>
             </div>
           </article>
 
           <article class="box project-card">
             <h3>Sistema de gestión en Java</h3>
-            <p>Proyecto orientado a organizar datos y procesar información con una estructura más robusta.</p>
+            <p>Proyecto hecho en Java 8, pensado para organizar datos y procesar información con una estructura más robusta.</p>
             <div class="project-meta">
               <span class="chip">Java</span>
               <span class="chip">POO</span>
               <span class="chip">SQL</span>
+              <a class="btn btn-secondary project-link" href="https://github.com/Rosario-22/DonacionesSeminario-Java-" target="_blank" rel="noopener noreferrer">Ver repo</a>
             </div>
+          </article>
+
+          <article class="box project-card">
+            <h3>Glamsoft</h3>
+            <p>Proyecto en preparación. Todavía no está listo para mostrarse, así que lo dejamos fuera del enlace por ahora.</p>
+            <div class="project-meta">
+              <span class="chip">Próximamente</span>
+              <span class="chip">En desarrollo</span>
+            </div>
+            <p class="project-note">Lo sumamos cuando esté más avanzado.</p>
           </article>
         </div>
       </div>
@@ -541,19 +598,23 @@
         <div class="grid-4">
           <div class="box skill-card">
             <h3>Lenguajes</h3>
-            <p>C, Java, SQL</p>
+            <p>Java, SQL, C</p>
           </div>
           <div class="box skill-card">
-            <h3>Frontend</h3>
-            <p>HTML, CSS</p>
+            <h3>Backend</h3>
+            <p>Spring y Spring Boot en aprendizaje, APIs REST, lógica de negocio</p>
           </div>
           <div class="box skill-card">
-            <h3>Control de versiones</h3>
-            <p>Git</p>
+            <h3>Bases web</h3>
+            <p>HTML y CSS básicos</p>
+          </div>
+          <div class="box skill-card">
+            <h3>Control de versiones y foco</h3>
+            <p>Git y profundización en Java</p>
           </div>
           <div class="box skill-card">
             <h3>Próximos pasos</h3>
-            <p>JavaScript, React y mejores prácticas de UI</p>
+            <p>Profundizar Java, Spring y Spring Boot, y bases de arquitectura backend</p>
           </div>
         </div>
       </div>
@@ -570,21 +631,6 @@
 
         <div class="timeline">
           <div class="timeline-item">
-            <strong>Ingeniería en Sistemas - UTN FRC</strong>
-            <small>Ingreso en trámite</small>
-            <p>
-              Estoy esperando que se tramiten los papeles desde UNRN para poder arrancar a cursar en la UTN-FRC.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <strong>Licenciatura en Sistemas - Universidad Nacional de Río Negro</strong>
-            <small>Trayectoria previa</small>
-            <p>
-              Formación en curso que forma parte de mi recorrido académico y que acompaña mi transición hacia Ingeniería en Sistemas.
-            </p>
-          </div>
-
           <div class="timeline-item">
             <strong>Técnico en Producción Agropecuaria con Orientación en Agroalimentos</strong>
             <small>Escuela de Educación Secundaria Agraria "Carlos Spegazzini" | Dic. 2022</small>
@@ -640,17 +686,17 @@
             <h3>Datos de contacto</h3>
             <div class="contact-list">
               <a class="contact-row" href="mailto:lopeztorresrosario362@gmail.com">
-                <span>Email</span>
+                <span class="contact-label"><span class="contact-icon">✉</span>Email</span>
                 <strong>lopeztorresrosario362@gmail.com</strong>
               </a>
               <a class="contact-row" href="mailto:lopeztorresrosario362@hotmail.com">
-                <span>Email secundario</span>
+                <span class="contact-label"><span class="contact-icon">✉</span>Email secundario</span>
                 <strong>lopeztorresrosario362@hotmail.com</strong>
               </a>
-              <div class="contact-row">
-                <span>LinkedIn</span>
-                <strong>Por definir</strong>
-              </div>
+              <a class="contact-row" href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+                <span class="contact-label"><span class="contact-icon">in</span>LinkedIn</span>
+                <strong>Mi perfil</strong>
+              </a>
             </div>
           </div>
 
