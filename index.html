@@ -311,7 +311,12 @@
       font-size: 0.92rem;
     }
 
-    .contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 18px; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      justify-items: stretch;
+    }
     .contact-list { display: grid; gap: 12px; margin-top: 14px; }
     .contact-row {
       display: flex;
@@ -325,6 +330,12 @@
       text-decoration: none;
     }
     .contact-row span { color: var(--muted); }
+
+    .contact-card {
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
+    }
 
     .contact-label {
       display: inline-flex;
@@ -573,13 +584,25 @@
           </article>
 
           <article class="box project-card">
-            <h3>Glamsoft</h3>
-            <p>Proyecto en preparación. Todavía no está listo para mostrarse, así que lo dejo fuera del enlace por ahora.</p>
+            <h3>Hackatón 2026 - Ajedrez 3D</h3>
+            <p>Participé en el backend de una aplicación de ajedrez 3D con Spring Boot, API REST y WebSocket. Me encargué de la lógica del juego, validación de movimientos y actualización del estado en tiempo real.</p>
             <div class="project-meta">
-              <span class="chip">Próximamente</span>
-              <span class="chip">En desarrollo</span>
+              <span class="chip">Spring Boot</span>
+              <span class="chip">Backend</span>
+              <span class="chip">WebSocket</span>
+              <a class="btn btn-secondary project-link" href="https://github.com/Rosario-22/Hackaton-2026-Ajedrez3D" target="_blank" rel="noopener noreferrer">Ver repo</a>
             </div>
-            <p class="project-note">Lo sumamos cuando esté más avanzado.</p>
+          </article>
+
+          <article class="box project-card">
+            <h3>Glamsoft</h3>
+            <p>Sistema de gestión para peluquerías en desarrollo, pensado para organizar turnos, clientes y tareas del negocio.</p>
+            <div class="project-meta">
+              <span class="chip">En desarrollo</span>
+              <span class="chip">Gestión</span>
+              <a class="btn btn-secondary project-link" href="https://github.com/Rosario-22/GlamSoft" target="_blank" rel="noopener noreferrer">Ver repo</a>
+            </div>
+            <p class="project-note">Seguimos trabajando en nuevas funciones y mejoras.</p>
           </article>
         </div>
       </div>
@@ -677,7 +700,7 @@
         </div>
 
         <div class="contact-grid">
-          <div class="box contact-card">
+          <div class="contact-card">
             <h3>Datos de contacto</h3>
             <div class="contact-list">
               <a class="contact-row" href="mailto:lopeztorresrosario362@gmail.com">
@@ -695,18 +718,6 @@
             </div>
           </div>
 
-          <div class="box contact-card">
-            <h3>Mensaje corto</h3>
-            <p style="color: var(--muted); margin-top: 10px;">
-              "Estoy buscando mi primera oportunidad como desarrolladora trainee y me interesa seguir creciendo en
-              proyectos con impacto real."
-            </p>
-            <div class="tags" style="margin-top: 18px;">
-              <span class="tag">Disponible</span>
-              <span class="tag">Aprendizaje</span>
-              <span class="tag">Compromiso</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
