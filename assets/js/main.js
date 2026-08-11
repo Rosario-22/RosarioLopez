@@ -6,19 +6,19 @@
     },
     {
       label: "Intereses",
-      value: "Backend, Java, Go y aprendizaje continuo",
+      value: "Desarrollo, tecnología y aprendizaje continuo",
     },
     {
       label: "Objetivo",
-      value: "Crecer en backend con Java y Go",
+      value: "Encontrar una oportunidad laboral estable donde pueda crecer profesionalmente y aportar mis conocimientos y habilidades.",
     },
   ],
   experience: [
     {
       title: "Municipalidad de Córdoba",
-      period: "Pasantía UTN + Municipalidad de Córdoba | Recién comenzando",
+      period: "Pasantía UTN + Municipalidad de Córdoba",
       description:
-        "Participación en una pasantía institucional orientada a tecnología y gestión. Recién empieza, asi que todavía hay mucho camino por recorrer, aprender y sumar experiencia real en un entorno profesional.",
+      "Pasantía institucional orientada a tecnología y gestión. Realizo pruebas sobre sistemas, identifico y documento errores para su posterior corrección, y participo en el seguimiento de trámites y mejoras del sistema.",
     },
     {
       title: "Ayudante de peluquería",
@@ -67,34 +67,36 @@
       description:
         "Sistema de gestión para peluquerías en desarrollo, pensado para organizar turnos, clientes y tareas del negocio.",
       tags: ["En desarrollo", "Gestión"],
-      url: "https://github.com/Rosario-22/GlamSoft",
-      note: "Seguimos trabajando en nuevas funciones y mejoras.",
+      note: "Sigue en proceso de desarrollo.",
     },
     {
       title: "Backend de dashboard municipal",
       description:
-        "Backend desarrollado en Go para un dashboard interno vinculado al trabajo de la Municipalidad de Córdoba, orientado a organizar datos y facilitar la consulta de información.",
-      tags: ["Go", "Backend", "Dashboard"],
-      url: "#contact",
+        "Backend desarrollado en Go para un dashboard interno vinculado al trabajo de la Municipalidad de Córdoba, orientado a organizar datos y facilitar la consulta de información. Actualmente está migrado a TypeScript.",
+      tags: ["Go", "Backend", "Dashboard", "TypeScript"],
       note: "Proyecto realizado en contexto laboral/institucional.",
     },
     {
       title: "Extensión de Chrome para flujo interno",
       description:
-        "Extensión creada para facilitar tareas del trabajo en la Municipalidad de Córdoba. Fue desarrollada inicialmente con JavaScript Vanilla y tengo pendiente confirmar si la versión actual ya está migrada a TypeScript.",
-      tags: ["Chrome Extension", "JavaScript", "TypeScript en revisión"],
+        "Extensión creada para facilitar tareas del trabajo en la Municipalidad de Córdoba. Fue desarrollada inicialmente con JavaScript Vanilla y actualmente está migrada a TypeScript.",
+      tags: ["Chrome Extension", "JavaScript", "TypeScript"],
       url: "#contact",
-      note: "Herramienta pensada para automatizar y agilizar tareas repetitivas.",
+      note: "Herramienta pensada para automatizar y visualizar mejor los entornos de trabajo.",
     },
   ],
   skills: [
     {
       title: "Lenguajes",
-      description: "Go, Java, SQL, C, JavaScript",
+      description: "Go, Java, SQL, C, JavaScript, TypeScript, HTML y CSS",
     },
     {
       title: "Backend",
       description: "Spring y Spring Boot en aprendizaje, APIs REST, lógica de negocio",
+    },
+    {
+      title: "Testing",
+      description: "Pruebas funcionales, identificación y reporte de errores, seguimiento de incidencias",
     },
     {
       title: "Bases web",
@@ -108,10 +110,6 @@
       title: "Herramientas y entorno",
       description: "Git, GitHub, Chrome Extensions y trabajo con proyectos institucionales",
     },
-    {
-      title: "Próximos pasos",
-      description: "Profundizar Go, Java, Spring Boot y bases de arquitectura backend",
-    },
   ],
   education: [
     {
@@ -119,21 +117,8 @@
       period: "Universidad Tecnológica Nacional - Facultad Regional Córdoba | En curso",
       description: "Estudiante de la carrera de Ingeniería en Sistemas en UTN FRC.",
     },
-    {
-      title: "Técnico en Producción Agropecuaria con Orientación en Agroalimentos",
-      period: 'Escuela de Educación Secundaria Agraria "Carlos Spegazzini" | Dic. 2022',
-      description: "Promedio: 7.92.",
-    },
   ],
   courses: [
-    {
-      title: "Formación complementaria",
-      items: [
-        "Producción de la Huerta Agroecológica - INTA (2022)",
-        "Introducción a las nuevas tecnologías para la producción de alimentos - INTA (2022)",
-        "Italiano Básico A1.1 - CUI.UBA (2023)",
-      ],
-    },
     {
       title: "Tecnología",
       items: [
